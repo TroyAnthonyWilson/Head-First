@@ -1,0 +1,15 @@
+C:\Users\bugge\Desktop\HeadFirst\Head-First\Code\Chapter_01\MyFirstConsoleApp\MyFirstConsoleApp\bin\Debug\net6.0\MyFirstConsoleApp.exe
+C:\Users\bugge\Desktop\HeadFirst\Head-First\Code\Chapter_01\MyFirstConsoleApp\MyFirstConsoleApp\bin\Debug\net6.0\MyFirstConsoleApp.deps.json
+C:\Users\bugge\Desktop\HeadFirst\Head-First\Code\Chapter_01\MyFirstConsoleApp\MyFirstConsoleApp\bin\Debug\net6.0\MyFirstConsoleApp.runtimeconfig.json
+C:\Users\bugge\Desktop\HeadFirst\Head-First\Code\Chapter_01\MyFirstConsoleApp\MyFirstConsoleApp\bin\Debug\net6.0\MyFirstConsoleApp.dll
+C:\Users\bugge\Desktop\HeadFirst\Head-First\Code\Chapter_01\MyFirstConsoleApp\MyFirstConsoleApp\bin\Debug\net6.0\MyFirstConsoleApp.pdb
+C:\Users\bugge\Desktop\HeadFirst\Head-First\Code\Chapter_01\MyFirstConsoleApp\MyFirstConsoleApp\obj\Debug\net6.0\MyFirstConsoleApp.csproj.AssemblyReference.cache
+C:\Users\bugge\Desktop\HeadFirst\Head-First\Code\Chapter_01\MyFirstConsoleApp\MyFirstConsoleApp\obj\Debug\net6.0\MyFirstConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bugge\Desktop\HeadFirst\Head-First\Code\Chapter_01\MyFirstConsoleApp\MyFirstConsoleApp\obj\Debug\net6.0\MyFirstConsoleApp.AssemblyInfoInputs.cache
+C:\Users\bugge\Desktop\HeadFirst\Head-First\Code\Chapter_01\MyFirstConsoleApp\MyFirstConsoleApp\obj\Debug\net6.0\MyFirstConsoleApp.AssemblyInfo.cs
+C:\Users\bugge\Desktop\HeadFirst\Head-First\Code\Chapter_01\MyFirstConsoleApp\MyFirstConsoleApp\obj\Debug\net6.0\MyFirstConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\bugge\Desktop\HeadFirst\Head-First\Code\Chapter_01\MyFirstConsoleApp\MyFirstConsoleApp\obj\Debug\net6.0\MyFirstConsoleApp.dll
+C:\Users\bugge\Desktop\HeadFirst\Head-First\Code\Chapter_01\MyFirstConsoleApp\MyFirstConsoleApp\obj\Debug\net6.0\refint\MyFirstConsoleApp.dll
+C:\Users\bugge\Desktop\HeadFirst\Head-First\Code\Chapter_01\MyFirstConsoleApp\MyFirstConsoleApp\obj\Debug\net6.0\MyFirstConsoleApp.pdb
+C:\Users\bugge\Desktop\HeadFirst\Head-First\Code\Chapter_01\MyFirstConsoleApp\MyFirstConsoleApp\obj\Debug\net6.0\MyFirstConsoleApp.genruntimeconfig.cache
+C:\Users\bugge\Desktop\HeadFirst\Head-First\Code\Chapter_01\MyFirstConsoleApp\MyFirstConsoleApp\obj\Debug\net6.0\ref\MyFirstConsoleApp.dll
