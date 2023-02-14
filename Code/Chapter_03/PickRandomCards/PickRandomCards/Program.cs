@@ -4,18 +4,20 @@
     {
         static void Main()
         {
-            string[] cards =PickSomeCards(5);
+            string[] cards = CardPicker.PickSomeCards(5);
 
+            PrintCards(cards);
+        }
+
+
+
+
+        private static void PrintCards(string[] cards)
+        {
             foreach (string card in cards)
             {
                 Console.WriteLine(card);
             }
-        }
-
-        private static string[] PickSomeCards(int numberOfCards)
-        {
-            string[] test = { "hi", "there" };
-            return test;
         }
     }
 }
