@@ -5,12 +5,28 @@
         public static string[] PickSomeCards(int numberOfCards)
         {
             string[] pickedCards = new string[numberOfCards];
+            int counter = 0;
+            int counter2 = 0;
 
             for (int i = 0; i < numberOfCards; i++)
             {
                 pickedCards[i] = RandomValue() + " of " + RandomSuit();
+                
+                if (i > 1)
+                {
+                    for (int j = 0; j < i; j++)
+                    {
+                        counter2++;
+                        if (pickedCards[i] == pickedCards[j])
+                        {
+                            i--;
+                        }
+                    }
+                }
+                counter++;
             }
-
+            Console.WriteLine(counter);
+            Console.WriteLine(counter2);
             return pickedCards;
         }
 
