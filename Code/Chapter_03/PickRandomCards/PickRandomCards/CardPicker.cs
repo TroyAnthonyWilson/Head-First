@@ -107,7 +107,7 @@
 
             for (int i = 0; i < numberOfCards; i++)
             {
-                Random random = new Random();
+                Random random = new();
                 int randomIndex = random.Next(0, deck.Count);
                 pickedCards.Add(deck[randomIndex]);
                 deck.RemoveAt(randomIndex);

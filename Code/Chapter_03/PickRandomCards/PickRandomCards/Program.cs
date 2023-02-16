@@ -27,20 +27,15 @@
             
             do
             {
-                Console.WriteLine("How many cards do you want to pick?");
-                string numberOfCards = Console.ReadLine();
-                isNumber = int.TryParse(numberOfCards, out numOfCards);
-                if (!isNumber)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Please enter a number");
-                }
-                else if (numOfCards < 1 || numOfCards > 52)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Please enter a number between 1 and 52");
-                    isNumber = false;
-                }
+                Console.Write("How many cards do you want to pick? : ");
+                string howManyCards = Console.ReadLine();
+                Console.Clear();
+                isNumber = int.TryParse(howManyCards, out numOfCards);
+                if (!isNumber || numOfCards < 1 || numOfCards > 52)
+                    {
+                        Console.WriteLine("Please enter a number between 1 and 52");
+                        isNumber = false;
+                    }
                 } while (!isNumber);
             Console.Clear();
             return numOfCards;
