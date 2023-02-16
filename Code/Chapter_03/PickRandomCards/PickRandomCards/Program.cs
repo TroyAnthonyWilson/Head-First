@@ -7,11 +7,11 @@
             int numOfCards = GetNumOfCards();
 
             
-            string[] cards = CardPicker.PickSomeCards(numOfCards);
+            List<string> cards = CardPicker.PickSomeCards(numOfCards);
             PrintCards(cards);
         }
 
-        private static void PrintCards(string[] cards)
+        private static void PrintCards(List<string> cards)
         {
             foreach (string card in cards)
             {
