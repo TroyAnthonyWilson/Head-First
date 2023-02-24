@@ -4,17 +4,17 @@
     {
         static void Main()
         {
-            Clown clown = new Clown("Boffo", 14);
+            Clown clown = new("Boffo", 14);
             clown.TalkAboutYourself();
-            Clown clown1 = new Clown("Biff", 16);
+            Clown clown1 = new("Biff", 16);
             clown1.TalkAboutYourself();
         }
     }
 
     public class Clown
     {
-        private string Name { get; set; }
-        private int Height { get; set; }
+        private readonly string Name;
+        private readonly int Height;
 
         public Clown(string name, int height)
         {
