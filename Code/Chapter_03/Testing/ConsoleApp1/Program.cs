@@ -5,16 +5,22 @@
         static void Main()
         {
             Clown clown = new("Boffo", 14);
-            clown.TalkAboutYourself();
-            Clown clown1 = new("Biff", 16);
-            clown1.TalkAboutYourself();
+            Clown clown1 = new("Biff", height: 16);
+
+            do
+            {
+                Console.Clear();
+                clown.TalkAboutYourself();
+                clown1.TalkAboutYourself();
+                Console.WriteLine("Would you like to here about them again? (Y)");
+            } while (Console.ReadLine().ToLower() == "y");
         }
     }
 
     public class Clown
     {
         private readonly string Name;
-        private readonly int Height;
+        private int Height;
 
         public Clown(string name, int height)
         {
@@ -22,9 +28,13 @@
             Height = height;
         }
 
+        /// <summary>
+        /// write out the name and height of the clown and add 1 to the height
+        /// </summary>
         public void TalkAboutYourself()
         {
-            Console.WriteLine($"My name is {Name} nad I'm {Height} inches tall.");
+            Console.WriteLine($"My name is {Name} and I'm {Height} inches tall.");
+            Height++;
         }
     }
 }

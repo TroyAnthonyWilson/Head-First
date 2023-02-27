@@ -72,7 +72,7 @@ namespace PickACardUI
                 pickedCards.Add(deck[randomIndex]);
                 deck.RemoveAt(randomIndex);
             }
-
+ 
             return pickedCards;
         }
     }
