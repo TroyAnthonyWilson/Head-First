@@ -5,7 +5,7 @@
 
         public static GuyData guyData = new();
 
-        private static string[] menuOptions = new string[] { 
+        private static string[] menuOptions = new string[] {
             "1. Add new guy",
             "2. Transfer cash",
             "3. Print all guys info",
@@ -13,7 +13,7 @@
 
         public static void PrintMenu()
         {
-            int choice = 1;
+            int choice = 0;
 
             do
             {
@@ -66,32 +66,26 @@
 
         public static void TransferCash(GuyData guyData)
         {
+            
+
             Console.Clear();
             if (guyData.listOfGuys.Count < 2)
             {
                 Console.WriteLine("There is nobody to transfer cash to.");
-                Console.WriteLine("Press any key to continue.");
+                Console.Write("Press any key to continue.");
                 Console.ReadKey();
                 return;
             }
-            Console.WriteLine("Who is giving?");
 
-            foreach (var guy in guyData.listOfGuys)
-            {
-                Console.WriteLine(guy.Name);
-            }
+            int giver = SelectGuy("Who is giving? ");
 
-            string giver = Console.ReadLine();
-
-            Console.WriteLine("How much are you going to give?");
+            Console.Clear();
+            Console.WriteLine($"How much is {guyData.listOfGuys[giver].Name} going to give?");
             int amount = int.Parse(Console.ReadLine());
 
-            
+            int receiver = SelectGuy("Who is receiving? ");
 
-            Console.WriteLine("Who is receiving?");
-            string receiver = Console.ReadLine();
-
-            Bank.TransferCash(guyData.listOfGuys[guyData.listOfGuys.FindIndex(guy => guy.Name == giver)], guyData.listOfGuys[guyData.listOfGuys.FindIndex(guy => guy.Name == receiver)], amount);
+            Bank.TransferCash(guyData.listOfGuys[giver], guyData.listOfGuys[receiver], amount);
         }
 
         public static void PrintAllGuysInfo(GuyData guyData)
@@ -104,5 +98,45 @@
             Console.WriteLine("Press any key to continue.");
             Console.ReadKey();
         }
+
+        //select guy
+        public static int SelectGuy(string question)
+        {
+            int choice = 0;
+            do
+            {
+                Console.WriteLine(question);
+                for (int i = 0; i < guyData.listOfGuys.Count; i++)
+                {
+                    if (choice == i)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Red;
+                    }
+                    Console.WriteLine(guyData.listOfGuys[i].Name);
+                    Console.ResetColor();
+                }
+
+                ConsoleKeyInfo keyInfo = Console.ReadKey();
+                switch (keyInfo.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        if (choice > 0)
+                        {
+                            choice--;
+                        }
+                        break;
+                    case ConsoleKey.DownArrow:
+                        if (choice < guyData.listOfGuys.Count - 1)
+                        {
+                            choice++;
+                        }
+                        break;
+                    case ConsoleKey.Enter:
+                        return choice;
+                }
+                Console.Clear();
+            } while (true);         
+        }
+
     }
 }

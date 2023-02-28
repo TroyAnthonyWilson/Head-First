@@ -2,19 +2,19 @@
 {
     public class GuyData
     {
-        public List<Guy> listOfGuys = new List<Guy>();
+        public List<Guy> listOfGuys = new();
 
         public GuyData() {}
 
         //add new guy
         public void AddGuy()
         {
-            Console.WriteLine("Enter name of new guy:");
+            Console.Clear();
+            Console.Write("Enter name of new guy: ");
             string name = Console.ReadLine();
-            Console.WriteLine("Enter amount of cash:");
+            Console.Write("Enter amount of cash: ");
             int amount = int.Parse(Console.ReadLine());
             listOfGuys.Add(new Guy(name, amount));
-        }
-       
+        }    
     }
 }
