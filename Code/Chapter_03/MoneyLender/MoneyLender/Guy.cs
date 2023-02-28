@@ -40,12 +40,17 @@
 
 
         /// <summary>
-        /// How much cash do I have?
+        /// Do I have enough cash?
         /// </summary>
         /// <returns>The amount of cash in my pocket</returns>
         public bool DoIHaveEnoughCash(int amount)
         {
             return amount > Cash;
+        }
+
+        public int GetCashAmount()
+        {
+            return Cash;
         }
     }
 }
