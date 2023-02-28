@@ -19,6 +19,9 @@
 
     public class Clown
     {
+        /// <summary>
+        /// The name of the clown
+        /// </summary>
         private readonly string Name;
         private int Height;
 
