@@ -6,10 +6,10 @@
         public static GuyData guyData = new();
 
         private static string[] menuOptions = new string[] {
-            "1. Add new guy",
-            "2. Transfer cash",
-            "3. Print all guys info",
-            "4. Exit" };
+            "Add new guy",
+            "Transfer cash",
+            "Print all guys info",
+            "Exit" };
 
         public static void PrintMenu()
         {
@@ -49,7 +49,7 @@
                                 guyData.AddGuy();
                                 break;
                             case 1:
-                                TransferCash(guyData);
+                                TransferCash();
                                 break;
                             case 2:
                                 PrintAllGuysInfo();
@@ -64,7 +64,7 @@
             } while (true);
         }
 
-        public static void TransferCash(GuyData guyData)
+        public static void TransferCash()
         {
             Console.Clear();
             if (guyData.listOfGuys.Count < 2)
@@ -76,12 +76,25 @@
             }
 
             int giver = SelectGuy("Who is giving? ");
-
+            int amount;
+            bool isPassing;
             Console.Clear();
-            Console.WriteLine($"How much of {guyData.listOfGuys[giver].GetCashAmount()} is {guyData.listOfGuys[giver].Name} going to give?");
-            int amount = int.Parse(Console.ReadLine());
-            Console.Clear();
-
+            do
+            {
+                Console.WriteLine($"How much of {guyData.listOfGuys[giver].GetCashAmount()} is {guyData.listOfGuys[giver].Name} going to give?");
+                string stringAmount = Console.ReadLine();
+                isPassing = int.TryParse(stringAmount, out amount);
+                
+                if (amount > guyData.listOfGuys[giver].GetCashAmount() || amount <= 0 || isPassing == false)
+                {
+                    Console.WriteLine("Sorry that is not a valid amount.");
+                    Console.WriteLine("Press any key to continue.");
+                    Console.ReadKey();
+                    isPassing = false;
+                }
+                Console.Clear();
+            } while (!isPassing);
+            
             int receiver = SelectGuy($"Who is receiving {amount}? ", giver);
 
             Bank.TransferCash(guyData.listOfGuys[giver], guyData.listOfGuys[receiver], amount);
