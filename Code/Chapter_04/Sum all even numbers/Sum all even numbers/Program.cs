@@ -4,7 +4,7 @@
     {
         static void Main()
         { 
-            Console.Write("Enter a number");
+            Console.Write("Enter a number: ");
             int number = int.Parse(Console.ReadLine());
             int sum = SumOfEvenNumbers(number);
             Console.WriteLine($"The sum of all even numbers from 0 to {number} is {sum}");
