@@ -4,16 +4,27 @@
     {
         static void Main()
         {
-            Clown clown = new("Boffo", 14);
-            Clown clown1 = new("Biff", height: 16);
+            //Clown clown = new("Boffo", 14);
+            //Clown clown1 = new("Biff", height: 16);
 
-            do
+            Console.WriteLine("Float");
+            for (float f = 10; !float.IsInfinity(f); f *= f)
             {
-                Console.Clear();
-                clown.TalkAboutYourself();
-                clown1.TalkAboutYourself();
-                Console.WriteLine("Would you like to here about them again? (Y)");
-            } while (Console.ReadLine().ToLower() == "y");
+                Console.WriteLine(f);
+            }
+            Console.WriteLine("Double");
+            for (double d = 10; !double.IsInfinity(d); d *= d)
+            {
+                Console.WriteLine(d);
+            }
+
+            //do
+            //{
+            //    Console.Clear();
+            //    clown.TalkAboutYourself();
+            //    clown1.TalkAboutYourself();
+            //    Console.WriteLine("Would you like to here about them again? (Y)");
+            //} while (Console.ReadLine().ToLower() == "y");
         }
     }
 

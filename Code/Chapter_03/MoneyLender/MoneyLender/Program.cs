@@ -4,7 +4,7 @@
     {
         static void Main()
         {
-            Menu.PrintMenu();
+            //Menu.PrintMenu();
         }
     }
 }
