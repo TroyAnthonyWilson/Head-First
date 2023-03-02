@@ -5,7 +5,7 @@
 namespace MoneyLender.Migrations
 {
     /// <inheritdoc />
-    public partial class CreateCarDB : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

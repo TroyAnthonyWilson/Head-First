@@ -11,8 +11,8 @@ using MoneyLender;
 namespace MoneyLender.Migrations
 {
     [DbContext(typeof(GuyContext))]
-    [Migration("20230301225510_CreateCarDB2")]
-    partial class CreateCarDB2
+    [Migration("20230302123047_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

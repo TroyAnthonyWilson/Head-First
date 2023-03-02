@@ -8,7 +8,7 @@ namespace MoneyLender
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=TROYPC;Database=CodeFirstExample;Integrated Security=SSPI;");
+            optionsBuilder.UseSqlServer(@"Server=TROYPC;Database=MoneyLender;Integrated Security=SSPI;TrustServerCertificate=True;");
         }
     }
 }
