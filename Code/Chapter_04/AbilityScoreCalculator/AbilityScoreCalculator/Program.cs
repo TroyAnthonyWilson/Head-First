@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace AbilityScoreCalculator
+﻿namespace AbilityScoreCalculator
 {
     public class Program
     {
@@ -11,7 +9,7 @@ namespace AbilityScoreCalculator
 
             for (int j = 0; j < 5; j++)
             {
-                for (int i = 1; i < 80000000; i++)
+                for (int i = 1; i < 8000; i++)
                 {
                     int score = new AbilityScoreCalculator().CalculateAbilityScore();
                     if (score == 19) MaxRoll++;
@@ -41,9 +39,9 @@ namespace AbilityScoreCalculator
             {
                 RollResult += (int)random.Next(1, 7);
             }
+            double devided = (RollResult / DevideBy);
+            Score = (int)devided + AddAmount;
 
-            Score = (int)((RollResult / DevideBy) + AddAmount);
-           
             if (Score < Minimum)
             {
                 Console.WriteLine("Min");
