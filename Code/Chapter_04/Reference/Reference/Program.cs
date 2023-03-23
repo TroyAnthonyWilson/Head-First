@@ -4,13 +4,13 @@
     {
         static void Main()
         {
-            Elephant Lucinda = new Elephant("Lucinda", 33);
-            Elephant Lloud = new Elephant("Lloyd", 40);
+            Elephant Lucinda = new("Lucinda", 33);
+            Elephant Lloud = new("Lloyd", 40);
 
             do
             {
                 Console.WriteLine("Press 1 for Lloyd, 2 for Lucinda, 3 to swap.");
-                string input = Console.ReadLine();
+                string? input = Console.ReadLine();
                 bool isNumber = int.TryParse(input, out int number);
                 if (isNumber)
                 {
@@ -27,6 +27,20 @@
                             break;
                         case 4:
                             Environment.Exit(0);
+                            break;
+                        case 5:
+                            Lloud = Lucinda;
+                            Console.WriteLine("Enter a new ear size");
+                            string? output = Console.ReadLine();
+                            if (int.TryParse(output, out int newEarSize))
+                            {
+                                Lucinda.ChangeEarSize(newEarSize);
+                                break;
+                            }
+                            Lucinda.ChangeEarSize();
+                            break;
+                        case 6:
+                            Lloud.SpeakTo(Lucinda, "Hello");
                             break;
                         default:
                             break;
